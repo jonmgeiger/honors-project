@@ -221,7 +221,7 @@ def printh(text, pattern='', crop = -1, print_pos = False):
     highlight_end = '\x1b[0m'
     if print_pos:
         print([m.start() for m in ms])
-    if len(ms) is 0:
+    if len(ms) == 0:
         print('\033[1mprinth: pattern \''+pattern+'\' not found\x1b[0m')
         return
     if crop > -1:
