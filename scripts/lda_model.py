@@ -33,9 +33,9 @@ def text_to_bigrams(df):
     def ML_process(text): 
         filt_text = text
         # Remove quotes, commas, periods, parentheses
-        filt_text = re.sub('[",\.\(\)/]', '', filt_text)
+        filt_text = re.sub('[",\.\(\)/]', ' ', str(filt_text))
         # Remove single quotes
-        filt_text = re.sub("'", '', filt_text)
+        filt_text = re.sub("'", ' ', str(filt_text))
         return filt_text
     
     def sent_to_words(list_sentences):
